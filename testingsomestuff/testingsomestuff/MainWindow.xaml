@@ -1,0 +1,53 @@
+﻿<Window x:Class="testingsomestuff.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:testingsomestuff"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="478.609" Width="649.934" Loaded="Window_Loaded">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="280" Margin="76,86,0,0" VerticalAlignment="Top" Width="490">
+            <TabItem Header="Íbúð og verð">
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" Margin="83,51,0,0" TextWrapping="Wrap" Text="{Binding Path=address}" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="255,51,0,0" TextWrapping="Wrap" Text="{Binding Path=Price}" VerticalAlignment="Top" RenderTransformOrigin="0.794,0.517"/>
+                    <Label Content="Heimilisfang:" HorizontalAlignment="Left" Margin="0,46,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Verð:" HorizontalAlignment="Left" Margin="214,46,0,0" VerticalAlignment="Top"/>
+
+
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Upplýsingar um íbúð">
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" Margin="106,53,0,0" TextWrapping="Wrap" Text="{Binding Path=ApartmentDetails.Type}" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="106,91,0,0" TextWrapping="Wrap" Text="{Binding Path=ApartmentDetails.YearBuilt}" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="106,131,0,0" TextWrapping="Wrap" Text="{Binding Path=ApartmentDetails.ApartmentSize}" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="106,165,0,0" TextWrapping="Wrap" Text="{Binding Path=ApartmentDetails.RoomsCount}" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="329,56,0,0" TextWrapping="Wrap" Text="{Binding Path=ApartmentDetails.BedroomCount}" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="329,98,0,0" TextWrapping="Wrap" Text="{Binding Path=ApartmentDetails.ToiletCount}" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="329,138,0,0" TextWrapping="Wrap" Text="{Binding Path=ApartmentDetails.Entrance}" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="329,172,0,0" TextWrapping="Wrap" Text="{Binding Path=ApartmentDetails.Garage}" VerticalAlignment="Top"/>
+                    <Label Content="Týpa:" HorizontalAlignment="Left" Margin="64,48,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Ár byggt:" HorizontalAlignment="Left" Margin="42,81,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Stærð fasteigns:" HorizontalAlignment="Left" Margin="7,128,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Fjöldi herbergja:" HorizontalAlignment="Left" Margin="6,160,0,0" VerticalAlignment="Top"/>
+                    <Label Content="fjöldi svefniherbergja:" HorizontalAlignment="Left" Margin="200,54,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Fjöldi Klósetta:" HorizontalAlignment="Left" Margin="237,96,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Inngangur:" HorizontalAlignment="Left" Margin="257,131,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Bílskúr:" HorizontalAlignment="Left" Margin="277,168,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Póstnúmer">
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" Margin="207,111,0,0" TextWrapping="Wrap" Text="{Binding Path=PostNumber.PostNumbersss}" VerticalAlignment="Top"/>
+                    <Label Content="Póstnúmer" HorizontalAlignment="Left" Margin="135,106,0,0" VerticalAlignment="Top"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <ComboBox x:Name="cbApartments" ItemsSource="{Binding}" DisplayMemberPath="address" HorizontalAlignment="Left" Margin="76,24,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
